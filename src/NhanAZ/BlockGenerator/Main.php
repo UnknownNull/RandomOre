@@ -7,7 +7,7 @@ namespace NhanAZ\BlockGenerator;
 use NhanAZ\libBedrock\StringToBlock;
 use pocketmine\block\Block;
 use pocketmine\block\BlockTypeIds;
-use pocketmine\block\Fence;
+use pocketmine\block\Lava;
 use pocketmine\block\Liquid;
 use pocketmine\block\VanillaBlocks;
 use pocketmine\block\Water;
@@ -128,7 +128,7 @@ class Main extends PluginBase implements Listener {
 
 	public function onBlockUpdate(BlockUpdateEvent $event): void {
 		$block = $event->getBlock();
-		if ($block instanceof Fence) {
+		if ($block instanceof lava) {
 			$mode = $this->getConfig()->get("generatorMode");
 			$checkSource = $this->getConfig()->get("checkSource");
 			$delayTime = $this->getConfig()->get("delayTime");
